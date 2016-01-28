@@ -6,7 +6,7 @@ class SpellcheckWordsController < ApplicationController
 
 	returnHash= {
 	"term"=> word,
-	"known"=> true,
+	"known"=> wCheck.known(["hello", "world"]),
 	"suggestions"=> wCheck.correct(word)}	
 
 	render json: returnHash
